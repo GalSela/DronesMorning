@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SDKSample</string>
+    <string name="title_activity_simple_api_activity">simple_api_activity</string>
+</resources>

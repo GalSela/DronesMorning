@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/piloting_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/metal"
+    tools:context=".activity.MiniDroneActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Welcome! :)"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/accent"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/bsmh"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnStartNow"
+        android:layout_centerHorizontal="true"
+        android:text="messages"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/pink"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnEmerg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="emergency"
+        android:layout_alignTop="@+id/welcome"
+        android:layout_alignRight="@+id/bsmh"
+        android:layout_alignEnd="@+id/bsmh" />
+
+    <ImageView
+        android:id="@+id/bsmh"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="44dp"
+        app:srcCompat="@mipmap/bsmh"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/btnStartNow"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@mipmap/pic"
+        android:layout_alignTop="@+id/bsmh"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+</RelativeLayout>
