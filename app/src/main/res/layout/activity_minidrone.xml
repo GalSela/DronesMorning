@@ -4,61 +4,216 @@
     android:id="@+id/piloting_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/metal"
+    android:background="@mipmap/background"
     tools:context=".activity.MiniDroneActivity">
-
-    <TextView
-        android:id="@+id/head"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:text="Welcome! :)"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/accent"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:layout_alignTop="@+id/bsmh"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btnStartNow"
-        android:layout_centerHorizontal="true"
-        android:text="messages"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="@color/pink"
-        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnEmerg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="emergency"
-        android:layout_alignTop="@+id/welcome"
-        android:layout_alignRight="@+id/bsmh"
-        android:layout_alignEnd="@+id/bsmh" />
+        android:text="נחיתת חירום"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView" />
 
     <ImageView
-        android:id="@+id/bsmh"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="44dp"
-        app:srcCompat="@mipmap/bsmh"
-        android:layout_alignParentTop="true"
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:srcCompat="@mipmap/background_for_joystick"
+        android:layout_marginRight="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <ImageButton
+        android:id="@+id/down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/down"
+        android:layout_below="@+id/take_off"
+        android:layout_alignLeft="@+id/take_off"
+        android:layout_alignStart="@+id/take_off"
+        android:layout_marginTop="12dp" />
+
+    <ImageButton
+        android:id="@+id/left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/left"
+        android:layout_alignTop="@+id/take_off"
+        android:layout_toLeftOf="@+id/take_off"
+        android:layout_toStartOf="@+id/take_off"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp" />
+
+    <ImageButton
+        android:id="@+id/up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/up"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_alignLeft="@+id/take_off"
+        android:layout_alignStart="@+id/take_off"
+        android:layout_marginTop="13dp" />
+
+    <ImageButton
+        android:id="@+id/right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/rigth"
+        android:layout_alignTop="@+id/left"
+        android:layout_toRightOf="@+id/up"
+        android:layout_toEndOf="@+id/up"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <ImageButton
+        android:id="@+id/take_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/take_off"
+        android:layout_marginRight="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <ImageView
-        android:id="@+id/btnStartNow"
+        android:id="@+id/imageView2"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        app:srcCompat="@mipmap/pic"
-        android:layout_alignTop="@+id/bsmh"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        app:srcCompat="@mipmap/background_for_joystick"
+        android:layout_below="@+id/ligth_on"
+        android:layout_toRightOf="@+id/camera"
+        android:layout_toEndOf="@+id/camera" />
+
+    <ImageButton
+        android:id="@+id/forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/up"
+        android:layout_alignTop="@+id/up"
+        android:layout_alignLeft="@+id/backward"
+        android:layout_alignStart="@+id/backward" />
+
+    <ImageButton
+        android:id="@+id/yaw_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/left"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <ImageButton
+        android:id="@+id/yaw_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/rigth"
+        android:layout_alignTop="@+id/yaw_left"
+        android:layout_toRightOf="@+id/land"
+        android:layout_toEndOf="@+id/land"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp" />
+
+    <ImageButton
+        android:id="@+id/backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/down"
+        android:layout_alignTop="@+id/down"
+        android:layout_toRightOf="@+id/yaw_left"
+        android:layout_toEndOf="@+id/yaw_left"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp" />
+
+    <ImageButton
+        android:id="@+id/land"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/land"
+        android:layout_alignTop="@+id/left"
+        android:layout_alignRight="@+id/backward"
+        android:layout_alignEnd="@+id/backward" />
+
+    <Button
+        android:id="@+id/ligth_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/imageView"
+        android:layout_toLeftOf="@+id/imageView"
+        android:layout_toStartOf="@+id/imageView"
+        android:text="להדליק אורות" />
+
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/camera" />
+
+    <ImageButton
+        android:id="@+id/download"
+        android:scaleType="fitXY"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/transparent"
+        app:srcCompat="@mipmap/download"
+        android:layout_alignBottom="@+id/camera"
+        android:layout_alignRight="@+id/yaw_left"
+        android:layout_alignEnd="@+id/yaw_left" />
+
+    <Button
+        android:id="@+id/ligth_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/forward"
+        android:layout_alignLeft="@+id/btnEmerg"
+        android:layout_alignStart="@+id/btnEmerg"
+        android:text="לכבות אורות" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/tikshuv"
+        android:layout_alignBottom="@+id/download"
+        android:layout_toLeftOf="@+id/imageView4"
+        android:layout_toStartOf="@+id/imageView4"
+        android:layout_marginRight="11dp"
+        android:layout_marginEnd="11dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/lotem"
+        android:layout_marginRight="17dp"
+        android:layout_marginEnd="17dp"
+        android:layout_alignTop="@+id/imageView3"
+        android:layout_toLeftOf="@+id/imageView5"
+        android:layout_toStartOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@mipmap/bsmh"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp" />
 
 </RelativeLayout>

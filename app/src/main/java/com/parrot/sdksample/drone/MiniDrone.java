@@ -271,6 +271,19 @@ public class MiniDrone {
         }
     }
 
+    public void ligthsOn(){
+        if(mDeviceController != null && mState.equals(ARCONTROLLER_DEVICE_STATE_ENUM.ARCONTROLLER_DEVICE_STATE_RUNNING))
+        {
+            mDeviceController.getFeatureCommon().sendHeadlightsIntensity((byte) 100, (byte) 100);
+        }
+    }
+
+    public void ligthsOff(){
+        if(mDeviceController != null && mState.equals(ARCONTROLLER_DEVICE_STATE_ENUM.ARCONTROLLER_DEVICE_STATE_RUNNING))
+        {
+            mDeviceController.getFeatureCommon().sendHeadlightsIntensity((byte) 0, (byte) 0);
+        }
+    }
     /**
      * Download the last flight medias
      * Uses the run id to download all medias related to the last flight
